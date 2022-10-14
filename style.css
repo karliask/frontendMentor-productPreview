@@ -1,0 +1,129 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background: hsl(30, 38%, 92%);
+    font-size: 14px;
+}
+
+h1{
+    font-family: 'Fraunces', serif;
+    color: hsl(212, 21%, 14%);
+    font-size: 1.5rem
+}
+
+p{
+    font-family: 'Montserrat', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+.attribution{
+    position: absolute;
+    top: 0;
+    
+}
+
+#img{
+    border-bottom-left-radius: 13px;
+    border-top-left-radius: 13px;
+    width: 300px;
+    src: url('images/image-product-desktop.jpg');
+    transition: all 0.3s ease;
+}
+
+#card{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    width: 50%;
+    height: 50%;
+    transition: all 0.3s ease;
+}
+
+#notImage{
+    background: white;
+    border-top-right-radius: 13px;
+    border-bottom-right-radius: 13px;
+    padding: 30px;
+    transition: all 0.3s ease;
+}
+
+#price{
+    color: hsl(158, 36%, 37%)
+}
+
+#prices{
+    display: flex;
+    align-items: center;
+}
+
+#prices p{
+    margin-left: 10%
+}
+
+#buy{
+    background: hsl(158, 36%, 37%);
+    border-radius: 7px;
+    padding: 15px;
+    text-align: center;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    top: 10%;
+    transition: all 0.3s ease;
+    user-select: none;
+}
+
+#buy:hover{
+    background: #1a4031
+}
+
+@media(max-height: 745px){
+    body{
+        font-size: 12px
+    }
+    #buy{
+        top: 0%;
+    }
+}
+
+@media(max-width: 560px){
+    #card{
+        width: 80%;
+    }
+}
+
+@media(max-width: 1155px){
+    body{
+        font-size: 12px;
+    }
+
+    #buy{
+        top: 5%
+    }
+
+    #card{
+        flex-direction: column;
+        top: 30%;
+    }
+
+    #notImage{
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 13px;
+    }
+
+    #img{
+        width: 100%;
+        content:url("images/image-product-mobile.jpg");
+        border-radius: 13px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        
+    }
+}
